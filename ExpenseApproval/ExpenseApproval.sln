@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseApprovalLib", "ExpenseApprovalLib\ExpenseApprovalLib.csproj", "{68F67D47-22E5-4CD3-83A7-9EABAC647C84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseApprovalApp", "ExpenseApprovalApp\ExpenseApprovalApp.csproj", "{07D948C9-49E0-409B-A197-55BAD4D2995F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68F67D47-22E5-4CD3-83A7-9EABAC647C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F67D47-22E5-4CD3-83A7-9EABAC647C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F67D47-22E5-4CD3-83A7-9EABAC647C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F67D47-22E5-4CD3-83A7-9EABAC647C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D948C9-49E0-409B-A197-55BAD4D2995F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D948C9-49E0-409B-A197-55BAD4D2995F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D948C9-49E0-409B-A197-55BAD4D2995F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D948C9-49E0-409B-A197-55BAD4D2995F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
