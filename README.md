@@ -32,6 +32,50 @@ classDiagram
     }
 ```
 
+This repository includes an example of how the chain of responsibility pattern can be used to automate the process of approving or declining submitted expenses. 
+
+The behavior we want will ensure that employees will only send the decision of approval over to their boss, if they are not authorized to do it themselves.
+
+The following sequence diagram will illustrate this.
+
+```mermaid
+sequenceDiagram
+    Actor Client
+    Client->>Sales: Expense
+
+    alt is less than or equal to $1000
+        Sales->>Client: Approved
+    else is above $1000
+        Sales->>Assistant Regional Manager: Expense
+    end
+
+
+    alt is less than or equal to $5000
+        Assistant Regional Manager->>Client: Approved
+    else is above $5000
+        Assistant Regional Manager->> Regional Manager: Expense
+    end
+
+    alt is less than or equal to $10000
+        Regional Manager->>Client: Approved
+    else is above $10000
+        Regional Manager->> Vice President: Expense
+    end
+    
+    alt is less than or equal to $100000
+        Vice President->>Client: Approved
+    else is above $100000
+        Vice President->> CEO: Expense
+    end
+
+    alt is less than or equal to $500000
+        CEO->>Client: Approved
+    else is above $500000
+        CEO->> Client: Declined
+    end
+```
+
+
 
 ## Links
 [Overleaf Project](https://www.overleaf.com/6841318976jnqgmtvpdhwb)
