@@ -75,6 +75,92 @@ sequenceDiagram
     end
 ```
 
+Class diagram of the example
+```mermaid
+classDiagram
+    IHandler <|.. ExpenseHandler
+    ExpenseHandler <--o IHandler
+    IHandler <-- Expense
+    ExpenseHandler <|-- Sales
+    ExpenseHandler <|-- AssistantRegionalManager
+    ExpenseHandler <|-- RegionalManager
+    ExpenseHandler <|-- VicePresident
+    ExpenseHandler <|-- CEO
+
+    class IHandler{
+        +setNext(IHandler)
+        +handle(Expense)
+    }
+
+    class ExpenseHandler{
+        -next: IHandler
+
+        +setNext(IHandler)
+        +handle(expense)
+    }
+
+    class Sales{
+        - approvalLimit: double
+
+        + handle(request)
+    }
+    class AssistantRegionalManager{
+        - approvalLimit: double
+
+        + handle(request)
+    }
+    class RegionalManager{
+        - approvalLimit: double
+
+        + handle(request)
+    }
+    class VicePresident{
+        - approvalLimit: double
+
+        + handle(request)
+    }
+    class CEO{
+        - approvalLimit: double
+
+        + handle(request)
+    }
+```
+
+As all the Concrete handlers function as employees approving expenses based on price, they can all be instances of an Employee class instead
+
+
+```mermaid
+classDiagram
+    IHandler <-- Expense
+    IHandler <|.. ExpenseHandler
+    ExpenseHandler <--o IHandler
+    ExpenseHandler <|-- Employee
+    
+
+    class IHandler{
+        +setNext(IHandler)
+        +handle(Expense)
+    }
+
+    class ExpenseHandler{
+        -next: IHandler
+
+        +setNext(IHandler)
+        +handle(expense)
+    }
+
+    class Employee{
+        - approvalLimit: double
+        - title
+        - firstName: string
+        - lastName: string
+
+        + handle(request)
+    }
+```
+
+With this design, we're still using the Chain of responsibility pattern, as the Employee objects can send the expense to other expensehandler object.
+
 
 
 ## Links
