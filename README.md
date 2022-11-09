@@ -89,6 +89,7 @@ classDiagram
     ExpenseHandler <|-- VicePresident
     ExpenseHandler <|-- CEO
 
+    <<interface>>IHandler
     class IHandler{
         +setNext(IHandler)
         +handle(Expense)
@@ -138,7 +139,7 @@ classDiagram
     ExpenseHandler <--o IHandler
     ExpenseHandler <|-- Employee
     
-
+    <<interface>>IHandler
     class IHandler{
         +setNext(IHandler)
         +handle(Expense)
