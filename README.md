@@ -13,10 +13,12 @@ classDiagram
     BaseHandler <|-- ConcreteHandler
     IHandler <-- Client
 
+    <<interface>>IHandler
     class IHandler{
         +setNext(IHandler)
         +handle(request)
     }
+    
 
     class BaseHandler{
         -next: IHandler
