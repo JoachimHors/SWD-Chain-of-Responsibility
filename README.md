@@ -9,7 +9,7 @@ Class diagram of the general structure of a program implementing the chain of re
 ```mermaid
 classDiagram
     IHandler <|.. BaseHandler
-    BaseHandler <--o IHandler
+    BaseHandler --> IHandler
     BaseHandler <|-- ConcreteHandler
     IHandler <-- Client
 
@@ -81,8 +81,8 @@ Class diagram of the example
 ```mermaid
 classDiagram
     IHandler <|.. ExpenseHandler
-    ExpenseHandler <--o IHandler
-    IHandler <-- Expense
+    ExpenseHandler --> IHandler
+    IHandler --> Expense
     ExpenseHandler <|-- Sales
     ExpenseHandler <|-- AssistantRegionalManager
     ExpenseHandler <|-- RegionalManager
@@ -134,9 +134,9 @@ As all the Concrete handlers function as employees approving expenses based on p
 
 ```mermaid
 classDiagram
-    IHandler <-- Expense
+    IHandler --> Expense
     IHandler <|.. ExpenseHandler
-    ExpenseHandler <--o IHandler
+    ExpenseHandler --> IHandler
     ExpenseHandler <|-- Employee
     
     <<interface>>IHandler
