@@ -167,8 +167,6 @@ With this design, we're still using the Chain of responsibility pattern, as the 
 
 
 ## Links
-[Overleaf Project](https://www.overleaf.com/6841318976jnqgmtvpdhwb)
-
 [Mermaid Documentation](https://mermaid-js.github.io/mermaid/#/)
 
 [Refactoring Guru](https://refactoring.guru/design-patterns/chain-of-responsibility)
